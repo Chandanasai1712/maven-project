@@ -1,4 +1,4 @@
 From tomcat:9
 MAINTAINER "Kosmik"
-COPY ./newproject/webapp/target/webapp.war /usr/local/tomcat/webapps
+COPY /var/lib/jenkins/workspace/newproject/webapp/target/webapp.war /home/ubuntu
 EXPOSE 8080
