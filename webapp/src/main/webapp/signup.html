@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign Up</title>
+   <!--  <link rel="stylesheet" href="form.css" /> -->
+     <style>
+        
+body {
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('./background.jpeg');
+    background-size: cover;
+    background-position: center;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .signup-box {
+    width: 360px;
+    height: 620px;
+    margin: auto;
+    
+    border-radius: 3px;
+  }
+  
+  .login-box {
+    width: 360px;
+    height: 280px;
+    margin: auto;
+    border-radius: 3px;
+    
+  }
+  
+  h1 {
+    text-align: center;
+    padding-top: 15px;
+   color: white;
+  }
+  
+  h4 {
+    text-align: center;
+    color: white;
+  }
+  
+  form {
+    width: 300px;
+    margin-left: 20px;
+  }
+  
+  form label {
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+    color: white;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+  }
+  input[type="button"] {
+    Width: 200px;
+    padding:15px 0;
+    text-align: center;
+    margin:20px 10px;
+    border-radius: 25px;
+    border:2px solid #f073b0;
+    background: transparent;
+    color:wheat;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+   button{
+    Width: 200px;
+    padding:15px 0;
+    text-align: center;
+    margin:20px 10px;
+    border-radius: 25px;
+    border:2px solid #f073b0;
+    background: transparent;
+    color:wheat;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+    span{
+    position: absolute;
+    
+    left: 0;
+    top: 0;
+    background-color: #eb1b80;
+    width: 0;
+    height: 100%;
+    border-radius: 25px;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width:100%;
+}
+button:hover{
+    border:none;
+} 
+  p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+    color: white;
+  }
+  p a{
+      color: aquamarine;
+  }
+  .para-2 {
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    margin-top: -10px;
+  }
+  .para-2 a {
+    color: #eb1b80;
+  }
+  
+  
+     </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script type="text/javascript">
+       function validate(){
+        
+        if(document.myform.FirstName.value==""){
+          alert("please provide First Name");
+          document.myform.FirstName.focus()
+          return false
+        }
+        else if(document.myform.LastName.value==""){
+          alert("please provide Last Name");
+          document.myform.LastName.focus()
+          return false
+        }
+        else if(document.myform.Email.value==""){
+          alert("please provide email id");
+          document.myform.Email.focus()
+          return false
+        }
+        else if(document.myform.Password.value==""){
+          alert("please provide password");
+          document.myform.Password.focus()
+          return false
+        }
+        else if(document.myform.confirmPassword.value==""){
+          alert("please confirm your password");
+          document.myform.confirmPassword.focus()
+          return false
+        }
+        else{
+          return true
+        }
+      }
+    </script>
+    
+  </head>
+  <body>
+    <div class="signup-box">
+      <h1>Sign Up</h1>
+      <h4>It's free and only takes a minute</h4>
+      <form name = "myform" onsubmit="return(validate());">
+        <label>First Name</label>
+        <input name = FirstName type="text" placeholder="First Name" />
+        <label>Last Name</label>
+        <input name = LastName type="text" placeholder="Last Name" />
+        <label>Email</label>
+        <input name = Email type="email" placeholder="email" />
+        <label>Password</label>
+        <input name = Password type="password" placeholder="password" />
+        <label>Confirm Password</label>
+        <input name =  confirmPassword type="password" placeholder="confirm password" />
+        
+        <button type="submit"><span></span>
+          submit
+        </button>
+          
+        
+      </form>
+      <p>
+        By clicking the Sign Up button,you agree to our <br />
+        <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
+      </p>
+    </div>
+    <p class="para-2">
+      Already have an account? <a href="form.html">Login here</a>
+    </p>
+  </body>
+</html>
+
+
+
+
+
